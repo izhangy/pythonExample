@@ -26,7 +26,8 @@ import sys
 try:
     f = open('myfile.txt')
     s = f.readline()
-    i = int(s.strip("0"))#用于溢出字符串头尾指定的字符或字符序列，只能删除开头或结尾的字符
+    #rstrip()去除结尾的空白，lstrip去除开头的空白，strip去除两端的空白
+    i = int(s.rstrip())#用于溢出字符串头尾指定的字符或字符序列，只能删除开头或结尾的字符
     with open("myfile.txt") as f:
         for item in f:
             print(item)
